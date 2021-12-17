@@ -1,20 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import ImageCarousel from "./components/ImageCarousel";
+
+const IMAGE_URLS = [
+  "https://picsum.photos/id/237/200/300",
+  "https://picsum.photos/id/236/200/300",
+  "https://picsum.photos/id/235/200/300",
+];
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <ImageCarousel imageSrcs={IMAGE_URLS} />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
